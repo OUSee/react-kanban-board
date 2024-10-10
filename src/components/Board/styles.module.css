@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: darkgray;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.title {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  color: darkgray;
+  margin-bottom: 10px;
+}
+
+.taskPill {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.taskName {
+  font-size: 14px;
+}
+.taskName:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.taskPill:has(.taskName:hover) {
+  outline: 2px solid white;
+}
+
+.addTaskBTN {
+  color: lightgray;
+  text-align: left;
+}
+
+.delBtn {
+  margin: 0;
+  font-size: 10px;
+  padding: 2px;
+  text-align: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.delBtn:hover {
+  background-color: darkgray;
+  color: white;
+  cursor: pointer;
+}
+
+.addTaskForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.addTaskInput {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.submitAddTask {
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.submitAddTask:hover {
+  outline: 2px solid white;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 100%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: lightgray;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  padding: 10px;
+  width: 75%;
+  transition: all 0.3s ease-in-out;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.option {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.option:hover {
+  background-color: darkgray;
+  color: white;
+  cursor: pointer;
+}
+
+.abortBtn {
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+.abortBtn:hover {
+  color: white;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.active:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.inactive {
+  content: "no tasks";
+}

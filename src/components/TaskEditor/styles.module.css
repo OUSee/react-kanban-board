@@ -1,0 +1,64 @@
+.container {
+  background-color: darkgray;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  color: white;
+  width: 100%;
+  text-align: start;
+}
+
+.description {
+  color: white;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.optionButton {
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.optionButton:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.editform {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.textInput,
+.desInput {
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+}
+
+.desInput {
+  height: 20vh;
+}
