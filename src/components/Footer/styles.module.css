@@ -1,4 +1,6 @@
 .container {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +10,23 @@
   background-color: darkgray;
   color: white;
   height: 60px;
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    position: sticky;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container {
+    position: static;
+    bottom: 0;
+  }
+  .signature {
+    font-size: 12px;
+    text-wrap: wrap;
+  }
 }

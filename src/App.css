@@ -11,6 +11,10 @@ button {
   padding: 5px;
   border-radius: 5px;
 }
+button:active {
+  background-color: white;
+  outline: white 1px solid;
+}
 
 .boardsTable {
   display: grid;
@@ -20,6 +24,7 @@ button {
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 ul {
@@ -30,4 +35,20 @@ ul {
 
 p {
   margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .boardsTable {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .boardsTable {
+    width: 100%;
+  }
 }

@@ -5,12 +5,14 @@ interface iOptionsTooltip {
   className: string;
   options: Task[];
   handleMoveClick(task: Task): void;
+  handleAbort(): void;
 }
 
 export const OptionsTooltipCMP = ({
   className,
   options,
   handleMoveClick,
+  handleAbort,
 }: iOptionsTooltip) => {
   return (
     <div className={styles.tooltip + " " + className}>
@@ -29,7 +31,9 @@ export const OptionsTooltipCMP = ({
           );
         })}
       </ul>
-      <button className={styles.abortBtn}>cancel</button>
+      <button className={styles.abortBtn} onClick={handleAbort}>
+        cancel
+      </button>
     </div>
   );
 };

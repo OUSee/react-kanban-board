@@ -21,12 +21,19 @@ export const Board = ({ type, tasks, options }: iBoard) => {
   const handleAddTask = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target as HTMLFormElement));
-    dispatch(taskSlice.actions.addTask(data.name));
+    if (data.name != "") {
+      dispatch(taskSlice.actions.addTask(data.name));
+    }
     setEditMode(false);
   };
 
   const handleMoveClick = (task: Task) => {
     dispatch(taskSlice.actions.moveTo(task));
+    setVisible(styles.hidden);
+    setEditMode(false);
+  };
+
+  const handleAbort = () => {
     setVisible(styles.hidden);
     setEditMode(false);
   };
@@ -82,6 +89,7 @@ export const Board = ({ type, tasks, options }: iBoard) => {
           handleMoveClick={handleMoveClick}
           options={options}
           className={visible}
+          handleAbort={handleAbort}
         />
       )}
     </div>
